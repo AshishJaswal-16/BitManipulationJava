@@ -1,0 +1,73 @@
+import java.util.*;
+
+public class FirstClass{
+
+    public static void main(String args[]) {        //Get Bit
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int pos = sc.nextInt();
+    int bitMask = 1<<pos;
+
+    if((bitMask & n) ==0){
+        System.out.println("Bit was zero.");
+    }else{
+        System.out.println("Bit was one.");
+    }
+    }
+
+
+
+
+ Scanner sc = new Scanner(System.in);           //Set Bit
+        int n = sc.nextInt();
+        int pos = sc.nextInt();
+        int bitMask = 1<<pos;
+
+        int newNo = bitMask | n;
+        System.out.println(newNo);
+
+    }
+
+
+
+
+
+
+
+     Scanner sc = new Scanner(System.in);           //Clear Bit
+        int n = sc.nextInt();
+        int pos = sc.nextInt();
+        int bitMask = 1<<pos;
+        int notBitMask = ~bitMask;
+
+        int newNo = notBitMask & n;
+        System.out.println(newNo);
+
+    }
+
+
+
+
+
+    Scanner sc = new Scanner(System.in);        //Update Bit
+       int oper = sc.nextInt();
+       // oper=1 -> set; oper=0 -> clear
+      int n = 5;
+      int pos = 1;
+     
+      int bitMask = 1<<pos;
+      if(oper == 1) {
+          //set
+          int newNumber = bitMask | n;
+          System.out.println(newNumber);
+      } else {
+       //clear
+       int newBitMask = ~(bitMask);
+       int newNumber = newBitMask & n;
+       System.out.println(newNumber);
+      }
+     
+   }
+
+
+}
